@@ -1,0 +1,24 @@
+<div class="wrapper">
+<form class="form-signin" name="frmLogin" (ngSubmit) = "login()" #loginForm = "ngForm">       
+  <h2 class="form-signin-heading">Login</h2>
+  <div class= "alert alert-danger"><strong></strong></div>
+
+   <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" [(ngModel)]="loginDetails.username" required>
+    </div>
+
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control" [(ngModel)]="loginDetails.password" required>
+    </div>
+
+    <div class="form-group">
+  		<button class="btn btn-primary" type="submit" [disabled] = "!loginForm.form.valid">Login</button>
+  	</div>
+  
+	</form>
+
+</div>
+{{userDetails}}
